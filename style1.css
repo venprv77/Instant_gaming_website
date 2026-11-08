@@ -1,0 +1,593 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(44, 42, 42);
+    color: white;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 5%;
+    background-color: black;
+    border-bottom: 1px solid rgb(44, 41, 41);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo img{
+    width: 50px;
+    height: 52px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+.logo:hover img{
+    transform: rotate(-5deg) scale(1.08);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:25px;
+}
+.navigation a{
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.navigation a:hover{
+    color: goldenrod;
+    text-decoration: underline;
+}
+.account{
+    display: flex;
+    gap: 15px;
+}
+.account a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.account img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.account img:hover{
+    transform: scale(1.2);
+}
+.platforms{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:25px;
+    width: 70%;
+    padding: 13px 2px;
+    background-color: rgb(26, 26, 26);
+}
+.platforms a{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    transition: color 0.3s ease;
+}
+.platforms a:hover{
+    color: rgb(218, 110, 32);
+}
+.platforms img{
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+.platforms a:hover img{
+    transform: scale(1.2);
+}
+.search{
+    display: flex;
+    margin-left: auto;
+}
+.search button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.search button:hover{
+    background-color: gold;
+    transform: scale(1.05);
+}
+.search button img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.banner,.banner1{
+    width: 100%;
+}
+.banner img,.banner1 img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.6s ease;
+}
+.banner:hover img,.banner1:hover img{
+    transform: scale(1.03);
+}
+.section,.pre,.recommend,.seen,.best{
+    width: 90%;
+    margin: 35px auto;
+}
+.section h2,.pre h2,.recommend h2,.seen h2,.best h2,.faq h2{
+    margin-bottom: 20px;
+    padding-left: 5px;
+    font-size: 24px;
+}
+.section h2:hover,.pre h2:hover,.recommend h2:hover,.seen h2:hover,.best h2:hover{
+    color: red;
+    transition: color 0.3s ease;
+}
+.games{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+.game{
+    overflow: hidden;
+    border: 1px solid #414141;
+    border-radius: 8px;
+    background-color: rgb(34, 33, 33);
+    transition: transform 0.35s ease,border-color 0.3s ease,box-shadow 0.3s ease;
+}
+.game:hover{
+    transform: translateY(-5px);
+    border-color: rgb(232, 11, 11);
+    box-shadow: 0 8px 20px rgb(37, 142, 112);
+}
+.game img{
+    width: 100%;
+    object-fit: cover;
+    background-color:black;
+    transition: transform 0.5s ease,
+}
+.game:hover img{
+    transform: scale(1.05);
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.details p,.game>p{
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+.details h3,.game>h3{
+    padding: 10px;
+    color: red;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+.best .games{
+    grid-template-columns: repeat(5,1fr);
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+    color: white;
+    border-top: 1px solid rgb(50, 49, 49);
+}
+.preorder-label{
+    padding:5px;
+    border-radius: 3px;
+    background-color: rgb(218, 116, 32);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.game:hover .preorder-label{
+    background-color: red;
+}
+.benifits{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px;
+    background-color:black;
+}
+.benifit{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.benifit:hover{
+    transform: translateY(-5px);
+}
+.icon img{
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.benifit:hover .icon img{
+    transform: rotate(8deg) scale(1.2);
+}
+.benifit h3{
+    margin-bottom:6px;
+    font-size: 13px;
+}
+.benifit p{
+    color: rgb(203, 190, 190);
+    font-size: 10px;
+}
+.trustpilot{
+    padding: 5px;
+}
+.trustpilot h3{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.trust-stars{
+    display: flex;
+    margin-bottom: 8px;
+}
+.trust-stars img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.trust-stars img:hover{
+    transform: scale(1.15) rotate(5deg);
+}
+.trustpilot p u{
+    color: white;
+    font-size: 9px;
+}
+.review-banner img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius:8px;
+}
+.review-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+}
+.review{
+    overflow: hidden;
+    padding-bottom: 15px;
+    border: 1px solid #414141;
+    border-radius: 6px;
+    background-color: #303030;
+    transition: transform 0.3s ease,border-color 0.3s ease,box-shadow 0.3s ease;
+}
+.review:hover{
+    transform: translateY(-5px);
+    border-color: red;
+    box-shadow: 0 8px 20px rgb(37, 142, 112);
+}
+.review>img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.review:hover>img{
+    transform: scale(1.04);
+}
+.review h3{
+    padding: 10px;
+    font-size: 13px;
+}
+.review small{
+    padding: 0 10px;
+    color: rgb(155, 150, 150);
+}
+.news{
+    width:100%;
+}
+.news-card{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgb(65, 63, 63);
+    border-radius: 7px;
+    transition: transform 0.3s ease,border-color 0.3s ease;
+}
+.news-card:hover{
+    transform: translateY(-5px);
+    border-color: red;
+}
+.news-video iframe{
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+.news-details{
+    align-content: center;  
+}
+.news-time{
+    color:goldenrod;
+    font-size: 12px;
+}
+.news-details h3{
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+.news-details p{
+    color: rgb(179, 167, 167);
+    line-height: 1.5;
+}
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+.category-grid a {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.category-grid img{
+    width: 90%;
+    height: 300px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+.category-grid a:hover{
+    transform: scale(1.1);
+}
+.category-grid span{
+    position: absolute;
+    left: 12px;
+    bottom: 30px;
+    color: white;
+    font-size: large;
+}
+.faq{
+    width: 80%;
+    margin:40px 60px;
+}
+.faq details{
+    margin-bottom: 10px;
+    border: 1px solid rgb(63, 61, 61);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.faq details:hover{
+    border-color: red;
+}
+.faq summary{
+    padding: 15px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.faq summary:hover{
+    color:red;
+}
+.faq details p{
+    padding: 15px 15px;
+    color: rgb(158, 153, 153);
+    line-height: 1.5;
+}
+.footer{
+    background-color: rgba(150, 148, 148, 0.049);
+    border-top: 1px solid rgb(76, 73, 73);
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    padding: 45px 10px;
+}
+.footer h3,.community h3{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.footer-links a{
+    display: block;
+    margin-bottom: 12px;
+    color: white;
+    font-size: 12px;
+}
+.footer-links a:hover{
+    color: red;
+}
+.footer-links img{
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+.social-icons{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.social-icons img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.social-icons a:hover img{
+    transform: translateY(-4px) scale(1.1);
+}
+.app-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.app-badges a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+.app-badges a:hover{
+    border-color: #ff5424;
+}
+.app-badges img{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.app-badges span{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.app-badges small{
+    color: white;
+    font-size: 9px;
+}
+.app-badges b{
+    font-size: 11px;
+}
+.footer-bottom{
+    padding: 20px 5px;
+    border-top: 1px solid rgb(51, 49, 49);
+}
+.copyright p{
+    color: white;
+    font-size: 11px;
+}
+@media(max-width:1000px){
+    .header{
+        flex-wrap: wrap;
+    }
+    .navigation{
+        gap: 15px;
+    }
+    .platforms{
+        gap: 15px;
+    }
+    .games,.best .games{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .review-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-top{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .news-card{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:600px){
+    .header{
+        padding: 12px;
+        gap: 15px;
+    }
+    .navigation a{
+        font-size: 11px;
+    }
+    .account{
+        margin-left: auto;
+    }
+    .search{
+        margin-left: 0;
+    }
+    .banner,.banner1,.review-banner{
+        width: 90%;
+        margin: 20px auto;
+    }
+    .banner img,.banner1 img,.review-banner img{
+        height: 170px;
+    }
+    .games,.best .games{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .news-card{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+    .news-details h3{
+        font-size: 14px;
+    }
+    .news-details p{
+        font-size: 12px;
+    }
+    .category-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    .category-grid a{
+        height: 100px;
+    }
+    .category-grid span{
+        font-size: 13px;
+    }
+    .faq{
+        width: 92%;
+        margin: 30px auto;
+    }
+    .faq summary{
+        padding: 12px;
+        font-size: 12px;
+    }
+    .footer-top{
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px 6%;
+    }
+}
+.banner,.game,.review,.news-card,.category-grid a{
+    animation: bounce 10s ease;
+}
+@keyframes bounce{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
